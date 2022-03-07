@@ -8,7 +8,7 @@ public class LinkedListService {
 	 * First we will check if the head is null.
 	 * Then we have created a node as currNode and assign it to head and then we will update the current Node.
 	 * We will update the currNode till it is not null 
-	 * When reached to last node then we will assign the currNode.next as new node
+	 * 	When reached to last node then we will assign the currNode.next as new node
 	 * @param data We are passing the data here
 	 */
 	
