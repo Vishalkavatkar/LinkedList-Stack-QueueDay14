@@ -12,16 +12,16 @@ public class LinkedList {
 		
 		/**
 		 * Here we are calling the add method to add node
-		 * We used deletLast method to delete the last node 
-		 *  Final Sequence: 56->70
+		 * We have used the insertBetween method to add node in between
+		 * Insert 40 to 30
+		 * Final Sequence: 56->30->40->70
 		 */
 		list.add(56);
 		list.add(30);
 		list.add(70);
 		list.printList();
 	
-		list.findNode(30);
-		list.findNode(65);
+		list.insertBetween(30, 40);
 		list.printList();
 	}
 		

@@ -70,6 +70,18 @@ public class LinkedListService {
 		 System.out.println("NULL");
 	}
 	
+	
+	/**
+	 * Method to print the node in a specific location
+	 * 1. First we pass the before node and data. The node we pass is the node before which we have to add the data.
+	 * 2. Then we assign the currNode as head
+	 * 3. Then we create a new node of the data
+	 * 4. Then we iterate in the list till we find the before node.
+	 * 5. Once we find the before node then we assign the currNode next to newNode.next
+	 * 6. And currNode.next to newNode
+	 * @param before : Here we will pass the node after which we have to add the new node
+	 * @param data : Here we are passing the data
+	 **/
 	public void insertBetween(int before, int data) {
 		Node currNode = head;
 		Node newNode = new Node(data);
