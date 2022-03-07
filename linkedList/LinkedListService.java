@@ -83,6 +83,18 @@ public class LinkedListService {
 		System.out.println("Inserted value " + data + " after node value " + before);
 		
 	}
+	//method to delete element from first
+	public void deleteFirst() {
+		//if head or list is empty then we print klist is empty
+		if (head==null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		//if list not empty then we assign head as head of next node
+		head = head.next;
+		
+	}
 	
 	
 	
