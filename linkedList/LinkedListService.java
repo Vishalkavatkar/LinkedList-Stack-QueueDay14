@@ -168,6 +168,47 @@ public class LinkedListService {
 		
 	}
 	
+	/**
+	 * Method to delete specific node from Linked List
+	 * 1. Here we take 2 variable currNode and prevNode and assign currNode and prevNode to head
+	 * 3. Then if currNode data is equal to the data given
+	 * 4. we are assigning the prevNode next to the currNode next
+	 * 6. we are changing the prevNode to currNode and currNode as currNode.next
+	 * 7. If not found that we are displaying the alert   
+	 * @param data
+	 */
+	public void deleteNode(int data) {
+		Node currNode = head;
+		Node prevNode = head;
+		
+		while(currNode != null) {
+			if(currNode.data == data) {
+				prevNode.next = currNode.next;
+				return;
+			}
+			prevNode = currNode;
+			currNode = currNode.next;
+		} 
+		System.out.println(" Node Not found " + data);
+		
+	}
+	
+	/**
+	 * Method to display the size of the LinkedList
+	 * Here we are traversing in the LinkedLst with currNode.next and incrementing the counter
+	 */
+	public void size() {
+		Node currNode = head;
+		int count = 0;
+		
+		while(currNode != null) {
+			count++;
+			currNode = currNode.next;
+		}
+		
+		System.out.println("The size of the LinkedList is : "+ count);
+	}
+	
 
 
 }
