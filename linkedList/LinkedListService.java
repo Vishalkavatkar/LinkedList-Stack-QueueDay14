@@ -97,6 +97,40 @@ public class LinkedListService {
 	}
 	
 	
+	/**
+	 * method to delete element from last position
+	 * Here we traverse through the LinkedList and make the second last next node as null.
+	 * 1. First we check if the head is null
+	 * 2. Second we check if there is only one node, then we make the head as null
+	 * 3. Here we make the secondLast node as head and lastNode as head.next
+	 * 4. And then we traverse in linkedList till the lastNode next node is not null
+	 * 5. Once we get the last and secondLast node we make the secondLast.next as null
+	 */
+	public void deleteLast() {
+		//if head or list is empty then we print list is empty
+		if (head==null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		//if head.next is null then will make head as null 
+		if(head.next==null) {
+			head = null;
+			return;
+		}
+		
+		Node secondLast = head;
+		Node lastNode = head.next;
+		while(lastNode.next != null) {
+			lastNode = lastNode.next;
+			secondLast = secondLast.next;
+		}
+		
+		secondLast.next = null;
+		
+	}
+	
+	
 	
 
 }
