@@ -70,6 +70,20 @@ public class LinkedListService {
 		 System.out.println("NULL");
 	}
 	
+	public void insertBetween(int before, int data) {
+		Node currNode = head;
+		Node newNode = new Node(data);
+		
+		while(currNode.data != before) {
+			currNode = currNode.next;
+		}
+		//assigning the newNode.next which is null to
+		newNode.next = currNode.next;
+		currNode.next = newNode;
+		System.out.println("Inserted value " + data + " after node value " + before);
+		
+	}
+	
 	
 	
 
