@@ -127,10 +127,35 @@ public class LinkedListService {
 		}
 		
 		secondLast.next = null;
+		System.out.println("successfully deleted the last node " + lastNode.data);
 		
 	}
 	
+	/**
+	 * find the node in the LinkedList
+	 * 1. Here we make the currNode as head
+	 * 2. And then we traverse in the LinkedList to find the data
+	 * 3. if currNode data is equal to the data passed as input then node found
+	 * 4. If node not found in the LinkedList then we return null
+	 * @param data : we pass the data
+	 * @return: if data found then we return the node or else return null
+	 */
+	public Node findNode(int data) {
+		Node currNode = head;
+		
+		while(currNode != null) {
+			if(currNode.data == data) {
+				System.out.println(" Node found for the value " + data);
+				return currNode;
+			}
+			
+			currNode = currNode.next;
+		}
+		System.out.println(" Sorry!! Unable to find the node of value " + data);
+		return null;
+		
+	}
 	
-	
+
 
 }
