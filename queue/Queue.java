@@ -19,13 +19,14 @@ public class Queue {
 		queue.enqueu(30);
 		queue.enqueu(70);
 
-		System.out.println("Elements in the queue are : ");
+		queue.display();
 		
-		
-		while(!queue.isEmpty()) {
-			System.out.println(queue.peek());
-			queue.dequeu();
-		}
+		queue.dequeu();
+		queue.display();
+		queue.dequeu();
+		queue.display();
+		queue.dequeu();
+		queue.display();
 		
 	}
 

@@ -75,5 +75,21 @@ public class QueueService {
 		}
 		return head.data;
 	}	
+	
+	public void display() {
+		if(head == null) {
+			System.out.println("Queue is empty");
+			return;
+		}
+		System.out.println("Data in the queue is: ");
+		//we are not moving the head to traverse. We are assigning the currNode to head as changing the currNode
+		Node currNode = head;
+		//Here we are traversing till the currNode is not null and then display the data of currNode 
+		while(currNode!= null) {
+			System.out.println(currNode.data);
+			// then we are incrementing the currNode to next
+			currNode = currNode.next;
+		}
+	}
 
 }
